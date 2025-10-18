@@ -86,8 +86,8 @@ export async function Login(req, res) {
 
       res.cookie("token", token, {
         httpOnly: true,
-        secure: false, // set true if using HTTPS
-        sameSite: "lax", // 'none' if deployed cross-site
+        secure: true, // set true if using HTTPS
+        sameSite: "none", // 'none' if deployed cross-site
         maxAge: 24 * 60 * 60 * 1000,
       });
 
